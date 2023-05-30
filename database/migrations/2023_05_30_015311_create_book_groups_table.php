@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('book_groups', function (Blueprint $table) {
             $table->id();
+            $table->string('imageurl');
+            $table->string('groupname');
             $table->timestamps();
         });
     }

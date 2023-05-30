@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detail extends Model
 {
+    public function Book(){
+        return $this->belongsTo(Book::class);
+    }
+
     use HasFactory;
 }

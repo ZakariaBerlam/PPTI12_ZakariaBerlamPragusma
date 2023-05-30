@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('group_id')->references('id')->on('book_groups');
+            $table->string('bookname');
+            $table->string('bookdescription');
+            $table->string('imageurl');
             $table->timestamps();
         });
     }

@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('details', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('book_id')->references('id')->on('books');
+            $table->string('author');
+            $table->date('postdate');
+            $table->integer('readtime');
+            $table->longText('body');
+            $table->string('sosmedurl');
+            $table->string('videourl');
             $table->timestamps();
         });
     }
